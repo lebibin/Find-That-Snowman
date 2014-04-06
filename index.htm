@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="robots" content="noindex,nofollow" />
+<title>ITWD223 Project - Browser Game</title>
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<link rel="stylesheet" type="text/css" href="css/fontfaces.css" />
+<link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+<script type="text/javascript" src="scripts/functions.js"> </script>
+</head>
+
+<body>
+<div id="container" >
+
+	<div id="gamePanel" >
+		<div id="gameTitle">
+			<h1 id="title">Find that Snowman!</h1><br />
+			<ul>INSTRUCTIONS: 
+				<li>Find the Snowman depicted in the image below.</li>
+				<li>Score is awarded for successfully finding the Snowman. Deduction of 0.5 if incorrect.</li>
+				<li>Player is granted 5 times to pause the Game.</li>
+				<li>Difficulties are [ Easy, Medium, Hard, Extreme] </li>
+				<li>Have fun PEEPS! <a href="https://www.facebook.com/b1b1n" >2108&copy;</a></li>
+				<li>Try to get a PERFECT Score of 56 pts!!</li>
+			</ul>
+		</div>
+	
+		<div id="targetDiv" title="I AM TEH SNOWMAHN!">
+			<img id="targetObj" src="assets/placeholder.png" />
+		</div>
+	
+		<div id="controls">
+			<ul>
+			<li><input type="button" value="Start" id="start" / ></li>
+			<li><input type="button" value="Pause" id="pause" / ></li>
+			</ul>
+			<ul>
+			<li><input type="button" value="Restart" id="restart" / ></li>
+			<li><input type="button" value="Exit" id="exit" / ></li>
+			</ul>
+		</div>
+
+		<div id="records">
+			<div id="scoreDiv" title="Displays your Current Total Score">
+			<ul>
+				<li><label>Score</label></li>
+				<li><input type="text" value="0" id="score" readonly /></li>
+			</ul>
+			</div>
+			
+			<div id="tries" title="Displays your Failed Click Tries">
+			<ul>
+				<li><label>Tries</label></li>
+				<li><input type="text" value="0" id="shots" readonly /></li>
+			</ul>
+			</div>
+			
+			<div id="pauseDiv" title="Displays your Allowable Number of Pauses">
+			<ul>
+				<li><label>Pause</label></li>
+				<li><input type="text" value="5" id="pauseCount" readonly /></li>
+			</ul>
+			</div>
+		</div>
+		
+		<div id="time" title="Displays Time Left in the Game">
+			<ul>
+				<li><label>Time Left</label></li>
+				<li><input type="text" value="15" id="timeCount" readonly /></li>
+			</ul>
+		</div>
+		
+	</div>
+
+	<div id="gameArea" >
+<script type="text/javascript">
+var lessTen = -1 ;
+document.write("<table style=\"width: 99%; height: 700px; \" >");
+	for ( var r = 0; r < 12; r++ ) {
+		document.write("<tr>");
+		for ( var c = 0; c < 15; c++ ) {
+			var markup = "<td onclick=\"objHit(this)\" onmouseover=\"mouseOverEff(this)\" onmouseout=\"mouseOutEff(this)\" style=\"width: 50px; height: 50px; background: #DBE7F0; background-image:-webkit-gradient(linear, left top, left bottom, from(#DBE7F0), to(#D5E7F0));background-image: -webkit-linear-gradient(top, #DBE7F0, #D5E7F0);  background-image:    -moz-linear-gradient(top, #DBE7F0, #D5E7F0);  background-image:     -ms-linear-gradient(top, #DBE7F0, #D5E7F0); background-image:      -o-linear-gradient(top, #DBE7F0, #D5E7F0); background-image:         linear-gradient(top, #DBE7F0, #D5E7F0);\"></td>";
+			document.write(markup);
+		}
+		document.write("</tr>");
+	}
+	document.write("</table>");
+</script>
+	</div>
+	
+</div>
+
+<script type="text/javascript" src="scripts/initializations.js"> </script>
+</body>
+</html>	
